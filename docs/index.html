@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MegaMCP walkthrough – Austin Drake</title>
+<meta name="description" content="A 2-minute walkthrough of a production Claude/MCP workflow: AI proposes, a human approves, every change can be undone.">
+<style>
+  :root { --bg:#060607; --ink:#f3f4f6; --mute:#9ca3af; --acc:#c8ff1e; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif }
+  main { max-width:1100px; margin:0 auto; padding:40px 16px 64px }
+  .eyebrow { color:var(--acc); font:600 13px ui-monospace,Consolas,monospace; letter-spacing:.18em; text-transform:uppercase }
+  h1 { font-size:clamp(30px,5vw,48px); line-height:1.1; letter-spacing:-.02em; margin:10px 0 12px }
+  p { color:#cfd3da; max-width:760px }
+  video { width:100%; border-radius:14px; border:1px solid #23252b; background:#000; margin:22px 0 10px }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:26px }
+  .card { border:1px solid #23252b; border-radius:12px; padding:16px 18px; background:#101114 }
+  .card b { display:block; color:var(--acc); font:600 13px ui-monospace,Consolas,monospace; letter-spacing:.1em; text-transform:uppercase; margin-bottom:6px }
+  a { color:var(--acc) }
+  footer { color:var(--mute); font-size:14px; margin-top:34px }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Production Claude / MCP workflow</div>
+  <h1>MegaMCP: AI proposes, a human approves, every change can be undone</h1>
+  <p>A 2-minute walkthrough recorded against a sandbox ad account on a local build of the production codebase. Claude calls the MCP tools, reads run instantly, and writes come back as plans with diffs. A person approves in the dashboard, undo is itself a plan, and the flight recorder logs everything.</p>
+  <video controls preload="metadata" poster="poster.png" src="megamcp-walkthrough.webm"></video>
+  <div class="grid">
+    <div class="card"><b>Trigger</b>A user asks Claude, or a scheduled workflow runs</div>
+    <div class="card"><b>Tools</b>170+ MCP tools across Google Ads, Meta, Microsoft Ads, GA4, Search Console, Tag Manager, WordPress and HubSpot</div>
+    <div class="card"><b>Safety</b>OAuth 2.1, AES-256-GCM vault, budget caps checked twice, drift refusal, untrusted-data instructions</div>
+    <div class="card"><b>Record</b>Every read, plan, approval, apply and undo, with who and which AI client</div>
+  </div>
+  <p style="margin-top:26px">Source for a minimal open reference implementation of the pattern: <a href="https://github.com/qcwebworks/approval-gated-mcp">github.com/qcwebworks/approval-gated-mcp</a>. Product: <a href="https://megamcp.com">megamcp.com</a>.</p>
+  <footer>Austin Drake · AI agents &amp; MCP engineering</footer>
+</main>
+</body>
+</html>
