@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Agents Reel – Austin Drake</title>
+<meta name="description" content="60 seconds: three Claude agents Austin Drake has built and runs, with a human approving anything that spends, sends or changes.">
+<style>
+  :root { --bg:#060607; --ink:#f3f4f6; --mute:#9ca3af; --acc:#c8ff1e; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif }
+  main { max-width:1100px; margin:0 auto; padding:40px 16px 64px }
+  .eyebrow { color:var(--acc); font:600 13px ui-monospace,Consolas,monospace; letter-spacing:.18em; text-transform:uppercase }
+  h1 { font-size:clamp(28px,5vw,44px); line-height:1.1; letter-spacing:-.02em; margin:10px 0 12px }
+  p { color:#cfd3da; max-width:760px }
+  video { width:100%; border-radius:14px; border:1px solid #23252b; background:#000; margin:22px 0 10px }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:22px }
+  .card { border:1px solid #23252b; border-radius:12px; padding:16px 18px; background:#101114 }
+  .card b { display:block; color:var(--acc); font:600 13px ui-monospace,Consolas,monospace; letter-spacing:.1em; text-transform:uppercase; margin-bottom:6px }
+  a { color:var(--acc) }
+  footer { color:var(--mute); font-size:14px; margin-top:34px }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">60-second reel</div>
+  <h1>Claude agents I've built and run</h1>
+  <p>Real footage of MegaMCP on a sandbox ad account, then the outbound SDR agent and the social content agent. Every one keeps a person in the loop for anything that spends, sends or changes.</p>
+  <video controls preload="metadata" poster="agents-poster.png" src="agents-reel.webm"></video>
+  <div class="grid">
+    <div class="card"><b>Agent 1 · MegaMCP</b>Claude works ad accounts and CRM over MCP. Writes become plans with diffs; a person approves; one-click undo. <a href="https://megamcp.com">megamcp.com</a></div>
+    <div class="card"><b>Agent 2 · Outbound SDR</b>Claude Code + Apollo: source, score, find a real hook, verified contact, draft, then batch approval before anything sends.</div>
+    <div class="card"><b>Agent 3 · Social content</b>Researches, drafts and schedules LinkedIn and Facebook posts through Buffer, unattended on a Raspberry Pi.</div>
+    <div class="card"><b>Supervision · Toolcaise</b>Cost per run, budget stops, human approval of sensitive tool calls, missed-run alerts. <a href="https://toolcaise.com">toolcaise.com</a></div>
+  </div>
+  <p style="margin-top:26px">Longer MegaMCP walkthrough: <a href="./">2-minute version</a>. Open reference implementation: <a href="https://github.com/qcwebworks/approval-gated-mcp">github.com/qcwebworks/approval-gated-mcp</a>.</p>
+  <footer>Austin Drake · Claude agents &amp; MCP engineering</footer>
+</main>
+</body>
+</html>
